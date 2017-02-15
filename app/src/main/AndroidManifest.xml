@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="wlgbsj.myas_allstudy">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="All_Demo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".notification.NotificationTestActivity"/>
+        <activity android:name=".notification.OtherActivity"/>
+        <activity android:name=".AlertDialog.AlertDialogTest"/>
+        <activity android:name=".AlertDialog.DialogTheme" android:theme="@style/MyDialogStyle"/>
+        <activity android:name=".PopupWindow.PopupWindowTest"/>
+        <activity android:name=".AlertDialog.ProgressDialogTest"/>
+    </application>
+
+
+
+    <!-- 添加操作闪光灯的权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <!-- 添加操作振动器的权限 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+</manifest>

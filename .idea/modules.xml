@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/3_ListViewTest/3_ListViewTest.iml" filepath="$PROJECT_DIR$/3_ListViewTest/3_ListViewTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3_RecyclerViewTest/3_RecyclerViewTest.iml" filepath="$PROJECT_DIR$/3_RecyclerViewTest/3_RecyclerViewTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3_UIBestPractice/3_UIBestPractice.iml" filepath="$PROJECT_DIR$/3_UIBestPractice/3_UIBestPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3_UICustomViews/3_UICustomViews.iml" filepath="$PROJECT_DIR$/3_UICustomViews/3_UICustomViews.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3_UILayoutTest/3_UILayoutTest.iml" filepath="$PROJECT_DIR$/3_UILayoutTest/3_UILayoutTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3_UIWidgetTest/3_UIWidgetTest.iml" filepath="$PROJECT_DIR$/3_UIWidgetTest/3_UIWidgetTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyAS_AllStudy.iml" filepath="$PROJECT_DIR$/MyAS_AllStudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/all_pattern/all_pattern.iml" filepath="$PROJECT_DIR$/all_pattern/all_pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,1 @@
+include ':app', ':3_ListViewTest', ':3_RecyclerViewTest', ':3_UIBestPractice', ':3_UICustomViews', ':3_UILayoutTest', ':3_UIWidgetTest', ':all_pattern'
