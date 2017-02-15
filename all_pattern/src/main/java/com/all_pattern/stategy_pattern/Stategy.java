@@ -7,5 +7,8 @@ public class Stategy {
 	 myduck.performQuack();
 	 myduck.setFlyBehavior(new FlyNoWay());
 	 myduck.performFly();
+	 myduck.performFly();
+	 myduck.performFly();
+	 myduck.performFly();
  }
 }
