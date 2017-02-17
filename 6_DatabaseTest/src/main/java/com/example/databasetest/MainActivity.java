@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         createDatabase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dbHelper.getWritableDatabase();
+                dbHelper.getWritableDatabase();//检查数据库是否存在  不存在 去创建
             }
         });
         Button addData = (Button) findViewById(R.id.add_data);
@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 values.put("pages", 510);
                 values.put("price", 19.95);
                 db.insert("Book", null, values); // 插入第二条数据
+
             }
         });
         Button updateData = (Button) findViewById(R.id.update_data);
