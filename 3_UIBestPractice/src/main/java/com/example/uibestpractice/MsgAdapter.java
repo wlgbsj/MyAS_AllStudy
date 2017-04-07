@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -14,7 +15,7 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
     private List<Msg> mMsgList;
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-
+        View myview;
         LinearLayout leftLayout;
 
         LinearLayout rightLayout;
@@ -25,6 +26,7 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
 
         public ViewHolder(View view) {
             super(view);
+            myview = view;
             leftLayout = (LinearLayout) view.findViewById(R.id.left_layout);
             rightLayout = (LinearLayout) view.findViewById(R.id.right_layout);
             leftMsg = (TextView) view.findViewById(R.id.left_msg);
@@ -43,8 +45,9 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, int position) {
         Msg msg = mMsgList.get(position);
+
         if (msg.getType() == Msg.TYPE_RECEIVED) {
             // 如果是收到的消息，则显示左边的消息布局，将右边的消息布局隐藏
             holder.leftLayout.setVisibility(View.VISIBLE);
@@ -56,6 +59,34 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
             holder.leftLayout.setVisibility(View.GONE);
             holder.rightMsg.setText(msg.getContent());
         }
+
+        holder.myview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = holder.getAdapterPosition();
+                Msg msg1 = mMsgList.get(position);
+                //Toast.makeText(v.getContext(),msg1.getContent(),Toast.LENGTH_SHORT).show();
+                if(msg1.getType() == Msg.TYPE_RECEIVED){
+                    Toast.makeText(v.getContext(),"收藏" + msg1.getContent(), Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(v.getContext(),"删除" + msg1.getContent(),Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        holder.myview.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                int position = holder.getAdapterPosition();
+                Msg msg1 = mMsgList.get(position);
+                Toast.makeText(v.getContext(),"长按" + msg1.getContent(),Toast.LENGTH_SHORT).show();
+                mMsgList.remove(position);
+                notifyItemRemoved(position);  //自动进行了刷新
+                return true;//返回true代表已经消耗       false的话 还会执行一次短按
+            }
+        });
+
+
     }
 
     @Override

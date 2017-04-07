@@ -44,6 +44,11 @@ public class MainActivity extends Activity {
     }
 
     @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+    }
+
+    @Override
     protected void onResume() {
 
         super.onResume();
@@ -75,6 +80,8 @@ public class MainActivity extends Activity {
         String str = "122";
         outState.putString("str", str);
     }
+
+
 
     public void onClick(View v) {
         switch (v.getId()) {

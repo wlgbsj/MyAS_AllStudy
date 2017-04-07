@@ -8,14 +8,45 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/10_AndroidThreadTest" />
+            <option value="$PROJECT_DIR$/10_ServiceBestPractice" />
+            <option value="$PROJECT_DIR$/10_ServiceTest" />
+            <option value="$PROJECT_DIR$/11_LBSTest" />
+            <option value="$PROJECT_DIR$/12_MaterialTest" />
+            <option value="$PROJECT_DIR$/14_CoolWeather" />
             <option value="$PROJECT_DIR$/3_ListViewTest" />
             <option value="$PROJECT_DIR$/3_RecyclerViewTest" />
             <option value="$PROJECT_DIR$/3_UIBestPractice" />
             <option value="$PROJECT_DIR$/3_UICustomViews" />
             <option value="$PROJECT_DIR$/3_UILayoutTest" />
             <option value="$PROJECT_DIR$/3_UIWidgetTest" />
+            <option value="$PROJECT_DIR$/4_FragmentBestPractice" />
+            <option value="$PROJECT_DIR$/4_FragmentTest" />
+            <option value="$PROJECT_DIR$/5_BroadcastBestPractice" />
+            <option value="$PROJECT_DIR$/5_BroadcastTest" />
+            <option value="$PROJECT_DIR$/5_BroadcastTest2" />
+            <option value="$PROJECT_DIR$/6_BroadcastBestPractice" />
+            <option value="$PROJECT_DIR$/6_DatabaseTest" />
+            <option value="$PROJECT_DIR$/6_FilePersistenceTest" />
+            <option value="$PROJECT_DIR$/6_LitePalTest" />
+            <option value="$PROJECT_DIR$/6_SharedPreferencesTest" />
+            <option value="$PROJECT_DIR$/7_ContactsTest" />
+            <option value="$PROJECT_DIR$/7_DatabaseTest" />
+            <option value="$PROJECT_DIR$/7_ProviderTest" />
+            <option value="$PROJECT_DIR$/7_RuntimePermissionTest" />
+            <option value="$PROJECT_DIR$/8_CameraAlbumTest" />
+            <option value="$PROJECT_DIR$/8_NotificationTest" />
+            <option value="$PROJECT_DIR$/8_PlayAudioTest" />
+            <option value="$PROJECT_DIR$/8_PlayVideoTest" />
+            <option value="$PROJECT_DIR$/9_NetworkTest" />
+            <option value="$PROJECT_DIR$/9_WebViewTest" />
+            <option value="$PROJECT_DIR$/QunYin_DragViewTest" />
+            <option value="$PROJECT_DIR$/QunYin_MyListView" />
+            <option value="$PROJECT_DIR$/QunYin_SystemWidget" />
+            <option value="$PROJECT_DIR$/QunYin_ViewLayout" />
             <option value="$PROJECT_DIR$/all_pattern" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/mytestqunyin" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

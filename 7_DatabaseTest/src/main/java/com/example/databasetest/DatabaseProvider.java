@@ -25,7 +25,7 @@ public class DatabaseProvider extends ContentProvider {
 
     static {
         uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
-        uriMatcher.addURI(AUTHORITY, "book", BOOK_DIR);
+        uriMatcher.addURI(AUTHORITY, "book", BOOK_DIR); //the code that is returned when a URI is matched
         uriMatcher.addURI(AUTHORITY, "book/#", BOOK_ITEM);
         uriMatcher.addURI(AUTHORITY, "category", CATEGORY_DIR);
         uriMatcher.addURI(AUTHORITY, "category/#", CATEGORY_ITEM);
@@ -35,7 +35,7 @@ public class DatabaseProvider extends ContentProvider {
     @Override
     public boolean onCreate() {
         dbHelper = new MyDatabaseHelper(getContext(), "BookStore.db", null, 2);
-        return true;
+        return true;  //返回true表示  内容提供器 初始化成功
     }
 
     @Override
@@ -48,7 +48,7 @@ public class DatabaseProvider extends ContentProvider {
                 cursor = db.query("Book", projection, selection, selectionArgs, null, null, sortOrder);
                 break;
             case BOOK_ITEM:
-                String bookId = uri.getPathSegments().get(1);
+                String bookId = uri.getPathSegments().get(1);//获取 外部想访问的哪一个数据id
                 cursor = db.query("Book", projection, "id = ?", new String[] { bookId }, null, null, sortOrder);
                 break;
             case CATEGORY_DIR:

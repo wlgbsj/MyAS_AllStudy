@@ -12,6 +12,12 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private String newId;
+    private String newId2;
+    private String newId3;
+    private String newId4;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

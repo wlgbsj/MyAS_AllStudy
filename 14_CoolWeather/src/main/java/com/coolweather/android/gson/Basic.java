@@ -17,6 +17,8 @@ public class Basic {
         @SerializedName("loc")
         public String updateTime;
 
+
+
     }
 
 }

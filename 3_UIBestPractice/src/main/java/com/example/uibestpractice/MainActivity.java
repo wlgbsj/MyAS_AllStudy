@@ -21,7 +21,11 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView msgRecyclerView;
 
-    private MsgAdapter adapter;
+    private  MsgAdapter adapter;
+
+    public MsgAdapter getAdapter(){
+        return  adapter;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

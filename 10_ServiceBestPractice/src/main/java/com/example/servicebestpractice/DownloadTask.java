@@ -32,7 +32,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
         this.listener = listener;
     }
 
-    @Override
+    @Override                       //params  就是在 Task执行execute（params） 的参数
     protected Integer doInBackground(String... params) {
         InputStream is = null;
         RandomAccessFile savedFile = null;
@@ -42,7 +42,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
             String downloadUrl = params[0];
             String fileName = downloadUrl.substring(downloadUrl.lastIndexOf("/"));
             String directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
-            file = new File(directory + fileName);
+            file = new File(directory , fileName);
             if (file.exists()) {
                 downloadedLength = file.length();
             }
@@ -56,13 +56,13 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
                     // 断点下载，指定从哪个字节开始下载
-                    .addHeader("RANGE", "bytes=" + downloadedLength + "-")
+                    .addHeader("RANGE", "bytes=" + downloadedLength + "-")//每次再从downloadedLength这里开始从服务器读取
                     .url(downloadUrl)
                     .build();
             Response response = client.newCall(request).execute();
             if (response != null) {
                 is = response.body().byteStream();
-                savedFile = new RandomAccessFile(file, "rw");
+                savedFile = new RandomAccessFile(file, "rw");  //不能跨目录创建文件
                 savedFile.seek(downloadedLength); // 跳过已下载的字节
                 byte[] b = new byte[1024];
                 int total = 0;
@@ -142,16 +142,17 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
 
     private long getContentLength(String downloadUrl) throws IOException {
         OkHttpClient client = new OkHttpClient();
+        long contentLength = 0;
         Request request = new Request.Builder()
                 .url(downloadUrl)
                 .build();
         Response response = client.newCall(request).execute();
         if (response != null && response.isSuccessful()) {
-            long contentLength = response.body().contentLength();
+            contentLength = response.body().contentLength();
             response.close();
-            return contentLength;
+           // return contentLength;
         }
-        return 0;
+        return contentLength;
     }
 
 }
