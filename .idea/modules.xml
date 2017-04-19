@@ -35,6 +35,8 @@
       <module fileurl="file://$PROJECT_DIR$/9_NetworkTest/9_NetworkTest.iml" filepath="$PROJECT_DIR$/9_NetworkTest/9_NetworkTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/9_WebViewTest/9_WebViewTest.iml" filepath="$PROJECT_DIR$/9_WebViewTest/9_WebViewTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyAS_AllStudy.iml" filepath="$PROJECT_DIR$/MyAS_AllStudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QunYin_12_ActivityTrans/QunYin_12_ActivityTrans.iml" filepath="$PROJECT_DIR$/QunYin_12_ActivityTrans/QunYin_12_ActivityTrans.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QunYin_12_RecyclerView/QunYin_12_RecyclerView.iml" filepath="$PROJECT_DIR$/QunYin_12_RecyclerView/QunYin_12_RecyclerView.iml" />
       <module fileurl="file://$PROJECT_DIR$/QunYin_DragViewTest/QunYin_DragViewTest.iml" filepath="$PROJECT_DIR$/QunYin_DragViewTest/QunYin_DragViewTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/QunYin_MyListView/QunYin_MyListView.iml" filepath="$PROJECT_DIR$/QunYin_MyListView/QunYin_MyListView.iml" />
       <module fileurl="file://$PROJECT_DIR$/QunYin_SystemWidget/QunYin_SystemWidget.iml" filepath="$PROJECT_DIR$/QunYin_SystemWidget/QunYin_SystemWidget.iml" />
