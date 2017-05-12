@@ -40,6 +40,7 @@
             <option value="$PROJECT_DIR$/8_PlayVideoTest" />
             <option value="$PROJECT_DIR$/9_NetworkTest" />
             <option value="$PROJECT_DIR$/9_WebViewTest" />
+            <option value="$PROJECT_DIR$/LruCache_and_DiskLruCache" />
             <option value="$PROJECT_DIR$/QunYin_12_ActivityTrans" />
             <option value="$PROJECT_DIR$/QunYin_12_RecyclerView" />
             <option value="$PROJECT_DIR$/QunYin_DragViewTest" />

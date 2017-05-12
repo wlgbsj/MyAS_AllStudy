@@ -11,6 +11,8 @@ import org.litepal.tablemanager.Connector;
 
 import java.util.List;
 
+import static org.litepal.crud.DataSupport.limit;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -42,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
                 //DataSupport.findFirst(Book.class);
                 //DataSupport.findLast(Book.class);
                 List<Book> books = DataSupport.select("price","press").find(Book.class);
-                DataSupport.where("where pages > ?","16").find(Book.class);
+                DataSupport.where("pages > ?","16").find(Book.class);
                 DataSupport.order("price desc").find(Book.class);
-                DataSupport.limit(3).find(Book.class);
-                DataSupport.limit(3).offset(1).find(Book.class);//实现查询2,3,4条   整体移位
+                limit(3).find(Book.class);
+                limit(3).offset(1).find(Book.class);//实现查询2,3,4条   整体移位
 
 
                DataSupport.select("name","author","pages")

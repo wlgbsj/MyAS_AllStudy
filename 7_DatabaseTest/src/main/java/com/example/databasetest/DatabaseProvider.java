@@ -142,13 +142,13 @@ public class DatabaseProvider extends ContentProvider {
     public String getType(Uri uri) {
         switch (uriMatcher.match(uri)) {// vnd开头 +android.cursor.全部还是item + vnd.(authority).path
             case BOOK_DIR:
-                return "vnd.android.cursor.dir/vnd.com.example.databasetest. provider.book";
+                return "vnd.android.cursor.dir/vnd.com.example.databasetest.provider.book";
             case BOOK_ITEM:
-                return "vnd.android.cursor.item/vnd.com.example.databasetest. provider.book";
+                return "vnd.android.cursor.item/vnd.com.example.databasetest.provider.book";
             case CATEGORY_DIR:
-                return "vnd.android.cursor.dir/vnd.com.example.databasetest. provider.category";
+                return "vnd.android.cursor.dir/vnd.com.example.databasetest.provider.category";
             case CATEGORY_ITEM:
-                return "vnd.android.cursor.item/vnd.com.example.databasetest. provider.category";
+                return "vnd.android.cursor.item/vnd.com.example.databasetest.provider.category";
         }
         return null;
     }

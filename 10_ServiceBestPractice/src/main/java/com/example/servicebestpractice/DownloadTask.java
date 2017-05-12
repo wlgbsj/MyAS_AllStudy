@@ -155,4 +155,8 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
         return contentLength;
     }
 
+    @Override
+    protected void onCancelled() {
+        super.onCancelled();
+    }
 }
